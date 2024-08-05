@@ -1,0 +1,21 @@
+''' write a program to pick all the 0's and move them to the end of the arrary.
+slide the non-zero elements to fill the gap while maintaning their relative order.'''
+
+def zero_to_end(lst):
+    s=0
+    e=0
+    for e in range(0,len(lst)):
+        if lst[e]:
+            lst[s]=lst[e]
+            s+=1
+            e+=1
+        else:
+            e+=1
+    while s < len(lst):
+        lst[s]=0
+        s+=1
+    return lst
+        
+lst=[0,1,2,0,3,4,0,5,6]
+res=zero_to_end(lst)
+print(res)
