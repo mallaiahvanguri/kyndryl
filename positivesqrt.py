@@ -5,8 +5,18 @@ class Solution:
     def isperfectsqrt(self,num:int) ->bool:
         for i in range(1,num+1):
             if num==i*i:
-                print(i,i,num)
                 return True
+        return False
+'''summation of arithmetic progression{sum of n odd numbers is n2}'''    
+class Solution:
+    def isperfectsqrt(self, n:int) ->bool:
+        sum=0
+        i=1
+        while sum < n:
+            sum+=i
+            if sum==n:
+                return True
+            i+=2
         return False
 sol=Solution()
 for i in range(1,10):
